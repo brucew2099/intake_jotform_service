@@ -42,7 +42,6 @@ pylint
 pyparsing
 python-dateutil
 python-dotenv
-pywin32
 pyzmq
 six
 SQLAlchemy
