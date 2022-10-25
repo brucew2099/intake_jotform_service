@@ -127,9 +127,6 @@ class Patient(Base):
             {self.coverage_type_id}, {self.referral_type_id}, \
             {self.image_front_id}, {self.image_back_id}'
 
-    def add_patient(self):
-        pass
-
 class Address(Base):
     """
     The address of a patient.

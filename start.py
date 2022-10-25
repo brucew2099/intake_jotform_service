@@ -3,10 +3,10 @@ Imports
 """
 import json
 import os
-from flask import request
+from flask import Flask, request
 
-from .app.app import create_app
-from .app.models import (
+from app.app import create_app
+from app.models import (
     Address,
     Phone,
     PhoneType,
@@ -18,7 +18,7 @@ from .app.models import (
     Intake,
     Image)
 
-from .app.exceptions import EmptyEntityError
+from app.exceptions import EmptyEntityError
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 
