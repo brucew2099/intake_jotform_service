@@ -26,7 +26,8 @@ def _extract_jotform_data():
     output = {}
     form_data = request.form.to_dict()
     if form_data.get("rawRequest"):
-        print(f'form_data = {form_data.get("rawRequest")}')
+        print(f'form_data = {form_data}')
+        print(f'rawRequest = {form_data.get("rawRequest")}')
         for key, value in json.loads(form_data["rawRequest"]).items():
             # Removes the "q<number>_" part from the key name
             # Instead of "q5_quantity" we want "quantity" as the key
