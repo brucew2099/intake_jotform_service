@@ -22,7 +22,6 @@ def index():
     """
     return render_template('index.html')
 
-
 @app.route('/process', methods=['GET', 'POST'])
 def process_jotform():
     """
