@@ -27,7 +27,7 @@ def process_jotform():
     """
     This is the process JotForm route
     """
-    form_data = json.dumps(request.form)
+    form_data = request.form.to_dict()
 
     intake = Intake()
     patient = Patient()
