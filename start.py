@@ -3,7 +3,7 @@ Imports
 """
 import json
 import os
-from flask import request
+from flask import render_template, request
 
 from app.app import create_app
 from app.models import (
@@ -19,6 +19,14 @@ app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 def index():
     """
         This is the main route
+    """
+    return render_template('index.html')
+
+
+@app.route('/process', methods=['GET', 'POST'])
+def process_jotform():
+    """
+    This is the process JotForm route
     """
     form_data = json.loads(request.form)
 
