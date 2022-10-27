@@ -9,14 +9,6 @@ class Config():
     """
     Loads the configuration file
     """
-    @staticmethod
-    def init_app(app):
-        """
-        Loads the configuration file
-        """
-        config_file = join(dirname(abspath(__file__)), 'config.json')
-        if not os.path.exists(config_file):
-            print(f'{app} - Initializing application...')
 
     basedir = abspath(dirname(__file__))
     load_dotenv(join(basedir, '.env-local'))
